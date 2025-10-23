@@ -1,0 +1,9 @@
+// src/index.scss
+
+// 1. Importar a folha de estilo SASS principal do Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// 2. Você pode adicionar estilos globais aqui (opcional por enquanto)
+body {
+  background-color: #f8f9fa; 
+}

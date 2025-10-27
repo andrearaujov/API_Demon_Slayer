@@ -1,46 +1,61 @@
-# Getting Started with Create React App
+# Desafio D1 - Zetta Lab 2025: Demon Slayer App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma aplicação web responsiva desenvolvida como parte do **Desafio D1 - Desenvolvimento de Software da Zetta Lab**.
 
-## Available Scripts
+A aplicação consome a API pública [Demon Slayer API](https://www.demonslayer-api.com/) para exibir informações sobre os personagens da série, avaliando a organização do código, boas práticas de desenvolvimento e criatividade na interface.
 
-In the project directory, you can run:
+## 🚀 Link do Deploy (Sugestão)
 
-### `npm start`
+(Adicione aqui o link do seu projeto publicado na Vercel ou Netlify)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## ⚙️ Especificações Técnicas Atendidas
 
-### `npm test`
+O projeto foi construído seguindo rigorosamente as especificações técnicas obrigatórias:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* **API Pública:** Consumo da [Demon Slayer API](https://www.demonslayer-api.com/), com retorno em JSON.
+* **Framework/Biblioteca:** **React**.
+* **Estilização:** **Bootstrap 5+** para layout e **SASS/SCSS** para customização.
+* **Linguagem:** **TypeScript**.
+* **Código Autoral:** Todos os componentes visuais (Navbar, Footer, Card) são de autoria própria, sem plugins de terceiros.
+* **Controle de Versão:** Uso de **Git** com commits semânticos (Conventional Commits).
 
-### `npm run build`
+## 💡 Requisitos da Aplicação Implementados
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* **Mínimo de 3 Rotas (usando a API)**:
+    * `/`: **Home**, com apresentação do projeto e 3 personagens em destaque.
+    * `/personagens`: **Lista de Personagens**, com busca e exibição dos 20 primeiros personagens da API.
+    * `/detalhes/:id`: **Página de Detalhes**, que exibe informações completas de um personagem selecionado.
+* **Componentização:** `Navbar` (menu) e `Footer` (rodapé) foram componentizados e são reutilizados em todas as páginas.
+* **Layout Responsivo (Bootstrap 5+)**: O grid de personagens se adapta aos breakpoints definidos:
+    * **X-Small (<576px):** 1 coluna.
+    * **Medium (≥768px):** 2 colunas.
+    * **Large (≥992px):** 3 colunas (usando `col-lg-4`).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Desafios Técnicos e Soluções
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* **Erro de CORS:** A `demonslayer-api.com` bloqueia requisições do `localhost`. A solução foi implementar o **Proxy de Desenvolvimento** do Create React App, configurando o `package.json` e ajustando o serviço da API para usar caminhos relativos.
+* **Estrutura da Resposta da API:** A API não retorna um array diretamente, mas sim um objeto `{ pagination: ..., content: [...] }`. O serviço da API foi ajustado para extrair corretamente o array da chave `content`.
 
-### `npm run eject`
+## 🚀 Como Rodar Localmente
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Siga os passos abaixo para executar o projeto em sua máquina.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1.  **Clone o repositório:**
+    ```bash
+    git clone [URL_DO_SEU_REPOSITORIO_PUBLICO]
+    cd demon-slayer-app
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+3.  **Inicie o servidor de desenvolvimento:**
+    ```bash
+    npm start
+    ```
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+4.  Abra [http://localhost:3000](http://localhost:3000) no seu navegador.

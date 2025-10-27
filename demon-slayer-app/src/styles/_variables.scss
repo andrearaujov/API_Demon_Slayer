@@ -1,0 +1,15 @@
+// 1. Definir Cores do Tema Personalizado
+$theme-primary: #8C1C13;     
+$theme-dark: #1a1a1a;       
+$theme-secondary: #736B62;  
+$theme-light-bg: #f4f1ea;   
+
+// 2. Atribuir as Cores do Tema às Variáveis Padrão do Bootstrap
+$primary: $theme-primary;
+$dark: $theme-dark;
+$secondary: $theme-secondary;
+$light: $theme-light-bg;
+
+// mudar a fonte padrão
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+$font-family-sans-serif: 'Merriweather', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;

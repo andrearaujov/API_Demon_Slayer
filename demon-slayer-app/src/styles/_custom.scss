@@ -1,0 +1,41 @@
+// src/styles/_custom.scss
+
+// Estilos globais
+body {
+  background-color: $light; // Usa nossa variável $light (bege claro)
+  color: #333;
+}
+
+// Customização da Navbar (usando a variável $dark)
+.navbar.bg-dark {
+  background-color: $dark !important; // Força o uso da nossa cor $dark
+  border-bottom: 3px solid $primary; // Adiciona uma borda com nossa cor primária
+}
+
+.navbar-brand {
+  font-weight: 700; // Deixa a fonte do logo mais forte
+}
+
+// Customização dos Cards
+.card {
+  border: 1px solid #ddd; 
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border-radius: 8px;
+
+  // Efeito 'hover' 
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+
+  .card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: #fff;
+  }
+}
+
+// Customização da Página de Detalhes
+.display-4 {
+  font-weight: 700; 
+}

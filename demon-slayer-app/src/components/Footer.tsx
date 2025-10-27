@@ -2,7 +2,6 @@ import React from 'react';
 
 export const Footer: React.FC = () => {
   return (
-    // 'mt-auto' do Bootstrap força o rodapé para baixo
     <footer className="footer mt-auto py-3 bg-light border-top">
       <div className="container text-center">
         <span className="text-muted">

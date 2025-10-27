@@ -1,5 +1,3 @@
-// src/services/apiService.ts
-
 import { Character } from '../types/character';
 
 // A URL base da API que estamos usando

@@ -1,9 +1,6 @@
-// src/components/Navbar.tsx
 import React from 'react';
-// Precisamos do 'Link' e 'NavLink' do react-router-dom
 import { Link, NavLink } from 'react-router-dom';
 
-// A linha principal é esta: "export const Navbar..."
 export const Navbar: React.FC = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">

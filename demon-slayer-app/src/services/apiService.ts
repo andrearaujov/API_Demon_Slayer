@@ -9,8 +9,8 @@ const API_URL = '/api/v1';
 export const fetchCharacters = async (): Promise<Character[]> => {
   try {
     // Faz a requisição para a API
-    const response = await fetch(`${API_URL}/characters`);
-    
+  const response = await fetch(`${API_URL}/characters?limit=20`);   
+   
     // Se a resposta não for OK (ex: erro 404, 500), lança um erro
     if (!response.ok) {
       throw new Error(`Falha ao buscar dados da API: ${response.statusText}`);
